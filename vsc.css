@@ -1,0 +1,496 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f3f3f3;
+  overflow-x: hidden;
+  white-space: wrap;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f3f3f3;
+  z-index: 3;
+}
+
+.barcontainer {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transform: translate(30px, 25px);
+}
+.barcontainer .bar {
+  display: block;
+  padding: 3px;
+  border-radius: 5px;
+  width: 40px;
+  margin: 5px;
+  background: black;
+  transform: translate(-6px, 0);
+}
+
+.menubtn {
+  width: 10%;
+  height: 90px;
+  float: left;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #fff;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  color: black;
+  text-align: center;
+  transition: 0.3s;
+  font-family: "Source Code Pro", monospace;
+  width: 100%;
+}
+.sidenav a:hover {
+  background: #dddddd;
+}
+.sidenav h2 {
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+}
+.sidenav p {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+.sidenav .closebtn {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 40px;
+  width: 40px;
+  margin-left: 50px;
+}
+.sidenav .closebtn:hover {
+  background: white;
+}
+
+.blank_space {
+  width: 75%;
+  height: 90px;
+  float: left;
+}
+
+.pp {
+  width: 15%;
+  height: 90px;
+  float: left;
+  transition: 0.5s;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.pp img {
+  width: 60px;
+  transform: translate(0, 15px);
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.ppimgcontainer {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6941176471);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.ppimgcontainer img {
+  max-width: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: auto;
+}
+.ppimgcontainer p {
+  padding: 0;
+  font-size: 80px;
+  width: 90px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  text-align: center;
+  background: rgba(123, 123, 123, 0.431372549);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .filter3, .navbar .filter4 {
+    display: none;
+  }
+  .pp {
+    transform: translate(-50px, 0px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .pp {
+    display: none;
+  }
+  .menubtn {
+    display: none;
+  }
+  .blank_space {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+}
+.sidebar {
+  float: left;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sidebar img {
+  width: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebar h2 {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  padding: 40px 20px;
+  letter-spacing: 2px;
+}
+.sidebar p {
+  padding: 5px 20px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+.sidebar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 30px;
+  padding-bottom: 15px;
+  margin-top: 13px;
+  display: block;
+  font-family: "Source Code Pro", monospace;
+  width: 100%;
+  transition: 0.2s;
+}
+.sidebar a:hover {
+  background: #b8b8b8;
+}
+
+.headsec h1 {
+  font-size: 40px;
+  font-family: "Noto Sans", sans-serif;
+  padding-left: 20px;
+  padding-top: 170px;
+}
+
+.navbar {
+  padding: 20px;
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar p {
+  float: left;
+  padding: 10px;
+  padding-left: 0px;
+}
+.navbar a {
+  float: left;
+  padding: 10px 20px;
+  margin-right: 5px;
+  display: block;
+  background: #ffffff;
+  text-decoration: none;
+  color: black;
+}
+.navbar a:hover {
+  background: #e1e1e1;
+}
+
+.linkic {
+  width: 20px;
+  transform: translate(-2px, 3px);
+  z-index: 1;
+}
+
+.map-pinic {
+  width: 13px;
+  transform: translate(-4px, 3px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .fullbody {
+    float: left;
+    width: 87%;
+    margin: 10px;
+    margin-bottom: 0;
+    position: relative;
+    top: 0;
+    left: 250px;
+  }
+  .headsec h1 {
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+}
+.line {
+  width: 97%;
+  height: 5px;
+  background: #bdbdbd;
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.card {
+  width: 22%;
+  height: 480px;
+  background: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  font-family: "Open Sans", sans-serif;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .plate {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+.card .plate h3 {
+  text-align: left;
+  padding: 8px 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .cards .card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .cards .card img {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cards .card {
+    width: 20%;
+    height: 500px;
+  }
+}
+.aboutme {
+  width: 95%;
+  background: white;
+  float: left;
+  margin: 20px;
+}
+.aboutme img {
+  width: 60%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+.aboutme h2 {
+  font-size: 40px;
+  padding: 20px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+.aboutme h3 {
+  font-size: 30px;
+  padding: 20px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+.aboutme p {
+  padding: 20px;
+  padding-top: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+.aboutme .subweb {
+  width: 34%;
+  transform: translate(-70%, -30px);
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #494949;
+}
+.aboutme .webdesign {
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #afafaf;
+  text-align: center;
+  color: white;
+  padding: 6px;
+}
+.aboutme .subsinging {
+  width: 24%;
+  transform: translate(-120%, -30px);
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #494949;
+}
+.aboutme .singing {
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #afafaf;
+  text-align: center;
+  color: white;
+  padding: 6px;
+}
+.aboutme .subpubspeaking {
+  width: 45%;
+  transform: translate(-41%, -30px);
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #494949;
+  color: white;
+  padding: 6px;
+}
+.aboutme .subpubspeaking p {
+  font-family: default;
+  transform: translate(85%, 0);
+}
+.aboutme .pubspeaking {
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #afafaf;
+  text-align: center;
+  color: white;
+  padding: 6px;
+}
+.aboutme .subwritting {
+  width: 56%;
+  transform: translate(-23%, -30px);
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #494949;
+}
+.aboutme .subwritting p {
+  font-family: default;
+  transform: translate(68%, 0);
+  color: white;
+}
+.aboutme .writting {
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin: auto;
+  background: #afafaf;
+  text-align: center;
+  color: white;
+  padding: 6px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .aboutme img {
+    width: 40%;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  float: left;
+  width: 95%;
+  margin: 20px;
+  margin-bottom: 0;
+  background: #545454;
+  color: white;
+  height: auto;
+}
+.footer h2 {
+  font-family: "Noto Sans Display", sans-serif;
+  padding: 20px;
+}
+.footer p {
+  padding: 20px;
+}
+.footer .lws {
+  width: 50px;
+  margin: 20px;
+  float: right;
+}
+.footer .key {
+  width: 50px;
+  margin: 20px;
+}
+
+.power {
+  background: #161616;
+  float: left;
+  width: 95%;
+  height: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-family: "Noto Sans Display", sans-serif;
+}/*# sourceMappingURL=vsc.css.map */
